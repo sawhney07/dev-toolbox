@@ -108,7 +108,7 @@ export default function HomePage() {
             {/* Hero Section */}
             <div className="mb-10">
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-balance">
-                Developer Utility Tools
+                utilityHood
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
                 A comprehensive collection of free online tools for developers. 

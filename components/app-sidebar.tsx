@@ -90,9 +90,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader className="border-b border-sidebar-border pb-4">
         <Link href="/" className="flex items-center gap-2 px-2 py-1">
           <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <span className="font-mono text-sm font-bold">DT</span>
+            <span className="font-mono text-sm font-bold">uH</span>
           </div>
-          <span className="text-lg font-semibold">DevToolbox</span>
+          <span className="text-lg font-semibold">utilityHood</span>
         </Link>
         <div className="relative px-2">
           <Search className="absolute left-4 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
