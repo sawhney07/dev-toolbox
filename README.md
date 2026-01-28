@@ -4,7 +4,7 @@ A comprehensive collection of free online developer tools built with Next.js 16,
 
 ## Features
 
-- **21 Utility Tools** across 5 categories
+- **43 Utility Tools** across 7 categories
 - **Light/Dark Theme** with system preference detection
 - **Favorites & Recent** tools tracking (localStorage)
 - **Responsive Design** with collapsible sidebar
@@ -14,16 +14,33 @@ A comprehensive collection of free online developer tools built with Next.js 16,
 ## Current Tools (MVP)
 
 ### Text & Content
-- **Word Counter** - Count words, characters, sentences, paragraphs with reading/speaking time
+- **Word & Character Counter** - Count words, characters, sentences with detailed character analysis and frequency (ENHANCED)
 - **Case Converter** - Convert between lowercase, UPPERCASE, Title Case, camelCase, snake_case, etc.
 - **Lorem Ipsum Generator** - Generate placeholder text for designs
+- **Markdown Preview** - Write Markdown and preview rendered HTML in real-time
+- **Text Diff** - Compare two texts side-by-side and highlight differences
+- **Text Cleaner** - Remove extra spaces, tabs, newlines, symbols, numbers, and more (NEW)
+- **Text Sorter** - Sort words or lines alphabetically, reverse, or by length (NEW)
+- **Duplicate Remover** - Remove duplicate lines or words from text (NEW)
+- **Text Summarizer** - Generate extractive summaries from text without AI (NEW)
+
+### Coding Essentials (NEW)
+- **Code Formatter** - Format and beautify code with auto-detect for 10+ languages (NEW)
+- **Code Minifier** - Minify JavaScript, CSS, and HTML code (NEW)
+- **CSV Prettifier** - Format and prettify CSV data with alignment and borders (NEW)
+- **JSON Formatter** - Format, validate, and beautify/minify JSON data
+- **SQL Formatter** - Format and beautify SQL queries with proper indentation
 
 ### Developer Tools
-- **JSON Formatter** - Format, validate, and beautify/minify JSON data
 - **Base64 Encode/Decode** - Encode and decode Base64 strings
 - **JWT Decoder** - Decode and inspect JSON Web Tokens with expiry checking
 - **Hash Generator** - Generate SHA-1, SHA-256, SHA-384, SHA-512 hashes
 - **Regex Tester** - Test and debug regular expressions with match highlighting
+- **URL Encoder/Decoder** - Encode and decode URL components and query strings
+- **HTML Entity Encoder** - Encode and decode HTML entities and special characters
+- **Cron Expression Parser** - Parse and explain cron expressions with next run times
+- **Timezone Converter** - Convert times between different timezones with live clock (NEW)
+- **IP Address Lookup** - Detect your IP address and view location information (NEW)
 
 ### Converters
 - **Color Converter** - Convert between HEX, RGB, and HSL color formats
@@ -31,6 +48,7 @@ A comprehensive collection of free online developer tools built with Next.js 16,
 - **Number Base Converter** - Convert between binary, decimal, octal, and hex
 - **Unit Converter** - Convert length, weight, temperature, data storage, and time units
 - **Timestamp Converter** - Convert between Unix timestamps and human-readable dates
+- **YAML ↔ JSON** - Convert between YAML and JSON formats (NEW)
 
 ### Generators
 - **UUID Generator** - Generate UUID v4 identifiers
@@ -42,6 +60,12 @@ A comprehensive collection of free online developer tools built with Next.js 16,
 - **Random Name Generator** - Generate random names, usernames, and social handles
 - **Coin Flip** - Virtual coin flip with statistics tracking
 - **List Randomizer** - Shuffle lists or pick random items/winners
+
+### Productivity & Utilities (NEW)
+- **Timer & Stopwatch** - Track time with stopwatch or countdown timer (NEW)
+- **Sticky Notes** - Create and manage quick notes with localStorage (NEW)
+- **File Type Identifier** - Identify file types by extension or upload (NEW)
+- **QR Code Scanner** - Scan QR codes from images (camera coming soon) (NEW)
 
 ## Tech Stack
 
@@ -164,28 +188,92 @@ A comprehensive collection of free online developer tools built with Next.js 16,
 
 ## Future Roadmap
 
-### Phase 2 - More Client-Side Tools
-- [ ] Markdown Preview
-- [ ] HTML Entity Encoder
-- [ ] URL Encoder/Decoder
-- [ ] Cron Expression Parser
-- [ ] SQL Formatter
-- [ ] XML Formatter/Validator
-- [ ] YAML to JSON Converter
-- [ ] Text Diff Tool
+### Phase 2 - More Client-Side Tools ✅
+- [x] Markdown Preview
+- [x] Text Diff Tool
+- [x] SQL Formatter
+- [x] HTML Entity Encoder
+- [x] URL Encoder/Decoder
+- [x] YAML to JSON Converter
+- [x] Cron Expression Parser
 
-### Phase 3 - Backend Integration (requires API)
-- [ ] PDF to Image
-- [ ] Image Compression
-- [ ] Image Format Converter
+### Phase 3 - Additional Client-Side Tools (for multi support - split a component into inner tabs)
+**Text & Content:**
+- [x] Word/Character Counter (merge Character with existing Word Counter)
+- [x] Text/Whitespace Cleaner (remove extra spaces, tabs, newlines, symbols, numbers, etc) 
+- [x] Word/Line Sorter (alphabetical, reverse, by length)
+- [x] Duplicate Remover (Line/Words)
+- [x] Text Summarizer (extractive, no AI)
+
+**Coding Essentials:**
+- [x] Code Formatter/Beautifier (Auto detect languages + list)
+- [x] Code Minifier (JS, CSS, HTML)
+- [x] CSV Prettifier
+- [x] Move SQL Formatter and JSON Formatter from Developer Tools to here
+
+**Developer Tools:**
+- [x] Timezone Converter
+- [x] IP Lookup (client IP detection)
+
+**Productivity & Utilities:**
+- [x] Stopwatch/Countdown Timer
+- [x] Sticky Notes (localStorage)
+- [x] File Type Identifier (by extension/magic bytes)
+- [ ] Bulk File Renamer (pattern-based)
+- [x] QR Code Scanner (camera/file upload)
+
+### Phase 4 - Backend Integration (requires API/Server)
+**Document Conversion:**
+- [ ] PDF → Word
+- [ ] Word → PDF
+- [ ] PDF → Image
+- [ ] Image → PDF
+- [ ] Text → PDF
+- [ ] Markdown → PDF
+- [ ] EPUB ↔ PDF
+
+**Image Processing:**
+- [ ] Image Format Converter (JPG ↔ PNG ↔ WebP)
+- [ ] HEIC → JPG
+- [ ] Image Compression (lossy/lossless)
+- [ ] Bulk Image Compression
+- [ ] Image Resizer
+- [ ] Image Cropper
+- [ ] Background Remover
+- [ ] Image Upscaler
+- [ ] EXIF Viewer/Remover
+
+**Audio/Video Processing:**
+- [ ] Audio Format Converter (MP3 ↔ WAV ↔ OGG)
+- [ ] Video Format Converter (MP4 ↔ WebM)
+- [ ] Video → Audio Extractor
+- [ ] Video/Audio Trimmer
+- [ ] Audio/Video Compression
 - [ ] Video to GIF
-- [ ] Audio Converter
 
-### Phase 4 - Authentication & Premium
+**PDF Tools:**
+- [ ] PDF Merger
+- [ ] PDF Splitter
+- [ ] PDF Page Deleter
+- [ ] PDF Page Reorder
+- [ ] PDF Watermark
+- [ ] PDF Password Protect/Unlock
+- [ ] PDF Compression
+
+**Advanced Features:**
+- [ ] OCR (Image to Text)
+- [ ] Speech to Text
+- [ ] AI Grammar Checker
+- [ ] AI Paraphraser
+- [ ] Currency Converter (real-time rates)
+- [ ] Internet Speed Test
+
+### Phase 5 - Authentication & Premium
 - [ ] User accounts
 - [ ] Save favorites to cloud
 - [ ] Premium tools
 - [ ] API access
+- [ ] Usage analytics
 
 ## Contributing
 

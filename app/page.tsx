@@ -6,7 +6,7 @@ import Link from "next/link"
 import { ArrowRight, Sparkles } from "lucide-react"
 
 import { cn } from "@/lib/utils"
-import { categories, getToolsByCategory } from "@/lib/tools-config"
+import { categories, getToolsByCategory, tools } from "@/lib/tools-config"
 import { useFavorites, useRecentTools } from "@/hooks/use-favorites"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -30,32 +30,25 @@ function ToolCard({
 }) {
   return (
     <Link href={tool.path} className="group">
-      <Card className="h-full transition-all hover:shadow-md hover:border-primary/50 bg-card">
-        <CardHeader className="pb-2">
-          <div className="flex items-start justify-between">
-            <div className="flex size-10 items-center justify-center rounded-lg bg-muted">
-              <tool.icon className="size-5 text-muted-foreground group-hover:text-primary transition-colors" />
+      <Card className="h-full transition-all hover:shadow-md hover:border-primary/50 bg-card px-4 py-3">
+        <div className="flex items-start justify-between mb-2">
+          <div className="flex items-center gap-2">
+            <div className="flex size-8 items-center justify-center rounded-lg bg-muted shrink-0">
+              <tool.icon className="size-4 text-muted-foreground group-hover:text-primary transition-colors" />
             </div>
-            <div className="flex items-center gap-1">
-              {tool.isNew && (
-                <Badge variant="secondary" className="text-[10px] px-1.5 py-0">
-                  NEW
-                </Badge>
-              )}
-              {isFavorite && (
-                <Sparkles className="size-4 text-amber-500" />
-              )}
-            </div>
+            <h3 className="text-sm font-semibold group-hover:text-primary transition-colors">
+              {tool.name}
+            </h3>
           </div>
-          <CardTitle className="text-base group-hover:text-primary transition-colors">
-            {tool.name}
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <CardDescription className="text-sm leading-relaxed">
-            {tool.description}
-          </CardDescription>
-        </CardContent>
+          <div className="flex items-center gap-2 shrink-0">
+            {isFavorite && (
+              <Sparkles className="size-4 text-amber-500" />
+            )}
+          </div>
+        </div>
+        <p className="text-sm text-muted-foreground leading-snug">
+          {tool.description}
+        </p>
       </Card>
     </Link>
   )
@@ -74,14 +67,14 @@ function CategorySection({
     <section id={category.id} className="scroll-mt-20">
       <div className="flex items-center gap-3 mb-4">
         <div className={cn("flex size-10 items-center justify-center rounded-lg", category.color)}>
-          <category.icon className="size-5" />
+          <category.icon className="size-4" />
         </div>
         <div>
           <h2 className="text-xl font-semibold">{category.name}</h2>
           <p className="text-sm text-muted-foreground">{category.description}</p>
         </div>
       </div>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pb-2">
         {tools.map((tool) => (
           <ToolCard
             key={tool.id}
@@ -106,22 +99,21 @@ export default function HomePage() {
         <main className="flex-1 overflow-auto">
           <div className="container max-w-7xl mx-auto p-6 md:p-8 lg:p-10">
             {/* Hero Section */}
-            <div className="mb-10">
+            <div className="mb-4">
               <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-3 text-balance">
                 utilityHood
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
-                A comprehensive collection of free online tools for developers. 
-                Format JSON, encode Base64, generate hashes, and much more.
+                Free online developer toolkit — format JSON, decode JWTs, generate UUIDs & QR codes, convert colors, test regex, create secure passwords, and more. Fast, private, and runs entirely in your browser.
               </p>
             </div>
 
             {/* Quick Stats */}
-            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 mb-10">
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 mb-8">
               <Card>
                 <CardHeader className="pb-2">
                   <CardDescription>Total Tools</CardDescription>
-                  <CardTitle className="text-2xl">16</CardTitle>
+                  <CardTitle className="text-2xl">{tools.length}</CardTitle>
                 </CardHeader>
               </Card>
               <Card>
