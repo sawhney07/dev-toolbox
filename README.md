@@ -1,4 +1,4 @@
-# utilityHood - Developer Utility Tools
+# DevToolbox - Developer Utility Tools
 
 A comprehensive collection of free online developer tools built with Next.js 16, React, and Tailwind CSS. All tools run locally in your browser - your data never leaves your device.
 
@@ -62,7 +62,7 @@ A comprehensive collection of free online developer tools built with Next.js 16,
 1. **Clone the repository**
    ```bash
    git clone <your-repo-url>
-   cd utilityhood
+   cd devtoolbox
    ```
 
 2. **Install dependencies**

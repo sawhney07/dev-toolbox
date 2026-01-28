@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useCallback } from "react"
 
-const FAVORITES_KEY = "utilityhood-favorites"
-const RECENT_KEY = "utilityhood-recent"
+const FAVORITES_KEY = "devtoolbox-favorites"
+const RECENT_KEY = "devtoolbox-recent"
 const MAX_RECENT = 10
 
 export function useFavorites() {

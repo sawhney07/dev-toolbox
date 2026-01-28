@@ -9,8 +9,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'utilityHood - Developer Utility Tools',
-  description: 'A comprehensive collection of free online developer tools for text manipulation, code formatting, encoding, and more.,
+  title: 'DevToolbox - Developer Utility Tools',
+  description: 'A comprehensive collection of free online developer tools for text manipulation, code formatting, encoding, and more.',
   keywords: 'developer tools, json formatter, base64, hash generator, code tools, text tools',
   generator: 'v0.app',
   icons: {
